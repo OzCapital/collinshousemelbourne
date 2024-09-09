@@ -1,0 +1,784 @@
+/* @override http://collinshousemelbourne.com.au/css/screen-lower.css?v4 */
+
+/*
+ *  Project Styles
+ *
+ */
+
+/* ==========================================================================
+    Base styles and resets
+   ========================================================================== */
+	html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+	html{-webkit-text-size-adjust: none;}
+	strong{ font-weight:bold;}
+	img{ vertical-align:top;}
+	.cl{ clear:both; font-size:0;}
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+
+	html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+	body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+	a { color: #00e; }
+	a:hover { color: #06e; }
+	a:focus { outline: thin dotted; }
+	a:hover, a:active { outline: 0; }
+	#footer a {color: #ffffff;}
+	abbr[title] { border-bottom: 1px dotted; }
+	b, strong { font-weight: bold; }
+	blockquote { margin: 1em 40px; }
+	dfn { font-style: italic; }
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	ins { background: #ff9; color: #000; text-decoration: none; }
+	mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+	pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+	q { quotes: none; }
+	q:before, q:after { content: ""; content: none; }
+	small { font-size: 85%; }
+	sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+
+	ul, ol { margin: 0; padding: 0; }
+	li { list-style:none; margin:0; padding:0; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+	img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+	svg:not(:root) { overflow: hidden; }
+	figure { margin: 0; }
+
+	form { margin: 0; }
+	fieldset { border: 0; margin: 0; padding: 0; }
+
+	label { cursor: pointer; }
+	legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+	button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+	button, input { line-height: normal; }
+	button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+	button[disabled], input[disabled] { cursor: default; }
+	input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+	input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+	input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+	textarea { overflow: auto; vertical-align: top; resize: vertical; }
+	input:valid, textarea:valid {  }
+	input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+	table { border-collapse: collapse; border-spacing: 0; }
+	td { vertical-align: top; }
+
+	.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+	.clearfix { *zoom: 1; }
+
+	input,textarea,select{-webkit-appearance:none;}
+
+
+/* ==========================================================================
+    General styles
+   ========================================================================== */
+	html { background:#fff; font-size:62.5%;}
+	body { font-family:Arial; color:#000; }
+
+	a { text-decoration:none; -webkit-transition: all 400ms ease; -moz-transition: all 400ms ease; -ms-transition: all 400ms ease; -o-transition: all 400ms ease; transition: all 400ms ease; outline:none!important; }
+		a:hover { color:#fff;}
+
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #8d7249; opacity:1; }
+	input:-moz-placeholder, textarea:-moz-placeholder{ color: #8d7249; opacity:1; }
+	input::-moz-placeholder, textarea::-moz-placeholder { color: #8d7249; opacity:1; }
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #8d7249; opacity:1; }
+
+	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+	img {max-width:100%; height:auto;}
+
+	.wrapper { width:100%; max-width:1080px; padding:0px 20px; margin:0 auto; position:relative; }
+	.wrapper:before, .wrapper:after { content: ""; display: table; }
+	.wrapper:after { clear: both; }
+	.wrapper { *zoom: 1; }
+
+	.wrapper.large {  max-width:1918px; padding:0px 50px;}
+	.wrapper.small {  max-width:1060px; }
+
+	.row{ margin-left: -10px; margin-right: -10px; }
+	.row:before, .row:after {display: table;content: "";line-height: 0;}
+	.row:after {clear: both;}
+	.row > div{ padding: 0 10px; }
+
+	.col12 { width: 100%; float: left;}
+	.col11 { width: 91.66666666666666%; float: left; }
+	.col10 { width: 83.33333333333334%; float: left;}
+	.col9 { width: 75%; float: left;}
+	.col8 { width: 66.66666666666666%; float: left; }
+	.col7 { width: 58.333333333333336%; float: left;}
+	.col6 { width: 50%; float: left;}
+	.col5 { width: 41.66666666666667%; float: left;}
+	.col4 { width: 33.33333333333333%; float: left;}
+	.col3 { width: 25%; float: left;}
+	.col2 { width: 16.666666666666664%; float: left;}
+	.col1 { width: 8.333333333333332%;  float: left;}
+
+	.mobile-show {display:none;}
+
+/* ==========================================================================
+    Fonts
+   ========================================================================== */
+	 /*
+	 ==== Google Fonts ====
+	 font-family: 'Montserrat', sans-serif;
+	 Normal 400
+	 Bold 700
+
+	 font-family: 'Roboto', sans-serif;
+	 Light 300
+	 Normal 400
+	 Bold 700
+	 */
+
+	 @font-face {
+	  font-family: 'Absara-Thin';
+	  src:  url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Absara-Thin.eot#iefix') format('embedded-opentype'),
+	  		url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Absara-Thin.otf')  format('opentype'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Absara-Thin.woff') format('woff'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Absara-Thin.ttf')  format('truetype'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Absara-Thin.svg#Absara-Thin') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'Avenir-Roman';
+	  src:  url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Avenir-Roman.eot#iefix') format('embedded-opentype'),
+	  		url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Avenir-Roman.otf')  format('opentype'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Avenir-Roman.woff') format('woff'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Avenir-Roman.ttf')  format('truetype'),
+			url('http://www.collinshousemelbourne.com.au/main-site/css/fonts/Avenir-Roman.svg#Avenir-Roman') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+/* ==========================================================================
+    Misc
+   ========================================================================== */
+
+	#page {padding-top:232px;background-color:#f4efe8;}
+
+/* ==========================================================================
+    Header
+   ========================================================================== */
+
+	#header{ position:fixed; top:0; left:0; right:0; width:100%; z-index:400; }
+
+
+		#header-inner{ position:relative; width:100%;}
+		#header-top{padding:54px 0px 47px 0px; border-bottom:1px solid #8d7249; text-align:center; background-color:#fff; -webkit-transition: all 280ms ease; -moz-transition: all 280ms ease; -ms-transition: all 280ms ease; -o-transition: all 280ms ease; transition: all 280ms ease; }
+		#logo{width:410px; height:61px; display:inline-block; -webkit-transition: all 280ms ease; -moz-transition: all 280ms ease; -ms-transition: all 280ms ease; -o-transition: all 280ms ease; transition: all 280ms ease; }
+		body.fixed-header #header #logo{width:296px; height:44px; }
+		body.fixed-header #header #header-top{padding: 39px 0px 31px; }
+
+		#main-menu{border-bottom:1px solid #8d7249;-webkit-box-shadow: 0 4px 7px 0 rgba(141,114,73,0.3);
+box-shadow: 0 4px 7px 0 rgba(141,114,73,0.3); background-color:#fff;}
+		#main-menu .wrapper {position:static;}
+		.nav{ list-style:none;  }
+		.nav > li{ list-style:none; display:block; float:left;  /*padding:15px 25px 17px 25px;*/}
+		.nav > li > a{display:block;  position:relative; font-family: 'Montserrat', sans-serif;  font-size:15px; line-height:22px; font-size:1.5rem; line-height:2.2rem; color:#8d7249; text-transform:uppercase; -webkit-transition: color 0.3s cubic-bezier(0.7,0,0.3,1); 	transition: color 0.3s cubic-bezier(0.7,0,0.3,1); padding:23px 25px 23px 25px; /*padding:8px 0px 6px 0px;*/ letter-spacing:0.6px;}
+		.nav > li.on > a,
+		.nav > li > a:hover{ }
+		.nav > li.first,
+		.nav > li:first-child {padding-left:0px;}
+		.nav > li.last,
+		.nav > li:last-child{padding-right:0px;}
+		.nav > li > a:before {position: absolute;bottom: 15px;left: 50%;margin-left: -25px;width: 50px;height: 1px;background: #8d7249;content: '';opacity: 0;	-webkit-transition: -webkit-transform 0.2s ease-in;	transition: transform 0.2s ease-in;-webkit-transform: scale3d(0,1,1);transform: scale3d(0,1,1);}
+		.nav > li >  a:hover:before,
+		.nav > li:hover >  a:before,
+		.nav > li.active > a:before {opacity: 1;	-webkit-transform: scale3d(1,1,1);transform: scale3d(1,1,1);}
+
+		.nav > li.register-btn  {padding:9px 0px 8px 5px; float:right;}
+		.nav > li.register-btn > a {padding:13px 20px; background-color:#8d7249; color:#fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6); border:1px solid rgb(98,74,37); opacity:0.8; -webkit-transition: all 400ms ease; -moz-transition: all 400ms ease; -ms-transition: all 400ms ease; -o-transition: all 400ms ease; transition: all 400ms ease;}
+		.nav > li.register-btn > a:before {display:none;}
+		.nav > li.register-btn > a:hover  { opacity:1; }
+
+		.nav > li.register-btn a {
+			background-color: #8d7249;
+			background: -webkit-gradient(linear, left top, right top, from(#8d7249), to(#8d7249), color-stop(0.5, #AF9D82));
+			background: -moz-gradient(linear, left top, right top, from(#8d7249), to(#8d7249), color-stop(0.5, #AF9D82));
+			background: gradient(linear, left top, right top, from(#8d7249), to(#8d7249), color-stop(0.5, #AF9D82));
+			-webkit-background-size: 500px 100%;
+			-moz-background-size: 500px 100%;
+			background-size: 500px 100%;
+			-webkit-animation-name: shimmer;
+			-moz-animation-name: shimmer;
+			animation-name: shimmer;
+			-webkit-animation-duration: 2.5s;
+			-moz-animation-duration: 2.5s;
+			animation-duration: 2.5s;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+
+
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+
+
+		.submenu-cont {visibility:hidden; opacity:0; z-index:-100; background:rgb(37,37,37);background:rgba(37,37,37,0.8); position:absolute; width:100%; top:99%; left:0; right:0;
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+
+		}
+		.submenu {list-style:none; margin:0 -10px; display:block; padding-top:30px; padding-bottom:33px; margin-left: 16px;}
+		.submenu li {width: 33.33333333333333%; float: left; padding:0px 10px;}
+		.submenu li img {display:block; border:2px solid #fff; margin-bottom:17px;}
+		.submenu li span {display:block;padding-bottom:17px;  font-family: 'Montserrat', sans-serif;  font-size:15px; line-height:22px; font-size:1.5rem; line-height:2.2rem; color:#fff; text-transform:uppercase; letter-spacing:0.6px; border-bottom: 1px solid #fff; width: 300px;}
+		.submenu li a img{-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;}
+		.submenu li a:hover img {opacity:0.7;}
+
+
+		#mobile-menu {border-bottom:1px solid #8d7249;-webkit-box-shadow: 0 4px 7px 0 rgba(141,114,73,0.3);
+box-shadow: 0 4px 7px 0 rgba(141,114,73,0.3); background-color:#fff; height:45px; position:relative;}
+		#mobile-menu-trigger {display:block; width:45px; height:45px; text-indent:-9999px; overflow:hidden; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-mobiloe-menu.png) center center no-repeat #8d7249; background-size:16px 10px; position:absolute; top:0; right:0;}
+
+		#menu {margin-top: 101px;}
+		.mm-listview > li > a,
+    	.mm-listview > li > span {font-family: 'Montserrat', sans-serif;  font-size:14px; line-height:14px; color:#fff; text-transform:uppercase; padding:14px 15px 14px 18px; background-color:#a08358; border-bottom:1px solid #8d7249;}
+
+		.mm-listview > li > a:hover,
+		.mm-listview > li.on > a {background-color:#ebe5dc;color:#8d7249;}
+		.mm-listview > li > a .glyph-item{ margin-right:15px; vertical-align:middle; font-size:16px;}
+
+		.mm-listview .register-btn2 a{background-color:#8d7249;}
+
+		.page-title {text-align:center; font-family: 'Montserrat', sans-serif; font-size:14px; line-height:14px; color:#8d7249; text-transform:uppercase; letter-spacing:0.84px; padding:15px 55px;}
+
+		.nav > li:hover .submenu-cont {  opacity:1; z-index:200;visibility:visible; }
+
+/* ==========================================================================
+    Home
+   ========================================================================== */
+
+	#banner-cont {padding-top:50px;padding-bottom:105px; background-color:#f4efe8;}
+	.banner{border:1px solid rgb(98,74,37); padding:19px; background-color:#fff; margin-bottom:90px;}
+
+	.banner-wrapper { width:100%; max-width:700px; margin:0 auto; position:relative; }
+	.banner-wrapper :before, .banner-wrapper :after { content: ""; display: table; }
+	.banner-wrapper :after { clear: both; }
+	.banner-wrapper  { *zoom: 1; }
+
+	.slide {max-width:100%;}
+	.banner { position: relative; }
+	.banner-slider-con { position: absolute; height: 100%; width: 100%; top: 0; left: 0; padding: 19px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box; overflow: hidden; }
+	.banner-slider { position: relative; height: 100%; width: 100%; }
+	.banner-slider .slide .cap { display: block; position: absolute; bottom: 15px; right: 15px; font-size: 12px; color: #fff; font-family: 'Roboto', sans-serif; }
+	.home-slide { position: absolute; top: 0; left: 0; border: 19px solid #fff; }
+
+	.cycle-slideshow.home-slideshow { position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; }
+	.home-slide {height: 100%;width: 100%;-webkit-background-size: cover;background-size: cover; }
+
+
+	.slide-spacer { width: 100%; position: relative; z-index: 0; }
+	.slide-spacer .inner:before { content: ''; display: block; padding-bottom: 44.3%; }
+	.slide-spacer.home .inner:before { padding-bottom: 33%; }
+	.slide-spacer .inner .loading {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 2px 1px 0px #8d7249;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -25px;
+		margin-left: -25px;
+		-moz-animation: spin 0.7s linear infinite;
+		-webkit-animation: spin 0.7s linear infinite;
+		animation: spin 0.7s linear infinite;
+	}
+
+	@-moz-keyframes spin {
+	  100% {
+	    -moz-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+	@-webkit-keyframes spin {
+	  100% {
+	    -webkit-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+	@keyframes spin {
+	  100% {
+	    -moz-transform: rotate(360deg);
+	    -ms-transform: rotate(360deg);
+	    -webkit-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+
+
+
+	.cycle-control {display:block; z-index:300; position:absolute; top:50%; margin-top:-30px; cursor:pointer;}
+	.cycle-prev{left:-19px;}
+	.cycle-next{right:-19px;}
+	.zoom-toggle {display:block; z-index:300; position:absolute; top:20px; right:20px;  cursor:pointer; width:36px; height:36px; overflow:hidden; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-in.png) center center no-repeat; }
+
+	#fullscreen-gallery {display:none; position:fixed; top:0px; bottom:0px; left:0px; right:0px; width:100%; height:100%; z-index:1000;}
+	#fullscreen-gallery-slider { width:100%; height:100%; background: rgb(37,37,37); background: rgba(37,37,37,0.8);}
+	#fullscreen-gallery .cycle-prev{left:0px;}
+	#fullscreen-gallery .cycle-next{right:0px;}
+	#fullscreen-gallery .slide {width:100%; height:100%; background-size:contain !important; background-repeat:no-repeat!important; background-position:center center!important;}
+	#fullscreen-gallery .zoom-toggle {background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-out.png) center center no-repeat;}
+
+	.entry h2 { font-family: 'Absara-Thin'; font-size:30px; line-height:34px; font-size:3rem; line-height:3.4rem; color:#8d7249; text-transform:uppercase; letter-spacing:0.6px; text-align:center; padding-bottom:35px; margin-bottom:35px; background:url(http://www.collinshousemelbourne.com.au/main-site/images/divider.svg) center bottom no-repeat; letter-spacing: 2px;}
+	.no-svg .entry  h2 { background-image: url(http://www.collinshousemelbourne.com.au/main-site/images/divider.png); }
+	.entry  h4 {display:block;font-family: 'Roboto', sans-serif; font-size:16px;font-size:1.6em; color:#8d7249; text-transform:uppercase; letter-spacing:1.28px; text-align:center; font-weight:300; margin-bottom:25px;}
+	.entry  p {font-weight: 300;font-family: 'Roboto', sans-serif;  font-size:14px; line-height:28px; font-size:1.4rem; line-height:2.8rem; color:#8d7249;  letter-spacing:1.12px; text-align:center; margin-bottom:20px;}
+	.entry  p a { color: inherit; text-decoration: underline; }
+	.entry  p a:hover { text-decoration: none; }
+	.entry .col p.last {margin-bottom:65px;}
+
+	#banner-cont .entry h4 {font-weight:400;}
+
+	.section {padding:160px 0px;}
+	.section.white {background-color:#fff;}
+	.section.grey {background-color:#f4efe8;}
+
+	.css-table { display: table; table-layout:fixed;}
+	.css-table img {max-width:100%; height:auto;}
+	.css-table .col { display: table-cell; width: 50%; table-layout:fixed; vertical-align:middle; text-align:center;}
+	.css-table .col.left {padding-right:50px;}
+	.css-table .col.right {padding-left:50px;}
+	.css-table .col.right .zoom-toggle { right: 123px; }
+	.css-table .col-img img {width:100%;}
+	.col.right.col-img .cap, .col.left.col-img .cap { display: block; position: absolute; bottom: 10px; right: 114px; font-size: 12px; color: #fff; font-family: 'Roboto', sans-serif; }
+
+
+	.btn {	cursor: pointer;	padding: 20px 28px;	display: inline-block;		text-transform: uppercase;	letter-spacing: 1px;	outline: none;	position: relative;	-webkit-transition: all 0.3s;	-moz-transition: all 0.3s;	transition: all 0.3s; border: 1px solid #8d7249;	font-family: 'Montserrat', sans-serif;  font-size:15px; line-height:15px; font-size:1.5rem; line-height:1.5rem; color:#8d7249; text-transform:uppercase; }
+	.btn:hover {color: #fff;	background: #8d7249;}
+	.btn.white { border: 1px solid #fff;  color:#fff; }
+	.btn.white:hover { background: #fff;  color:#000; }
+
+/* ==========================================================================
+    Footer
+   ========================================================================== */
+
+	#register {background-color:#000903; min-height:500px; background-position:center center; background-repeat:no-repeat; padding:110px 0px 115px 0px; text-align:center;}
+		#footer-logo{width:114px; height:121px; display:block; margin:0 auto 60px auto; }
+
+	#footer{overflow:hidden; background-color:#201f1f; padding:60px 0px; font-family: 'Avenir-Roman'; font-size:15px; line-height:25px; font-size:1.5rem; line-height:2.5rem; color:#fff; letter-spacing:0.3px;}
+		#footer .wrapper {max-width:980px;}
+		.footer-top {border-bottom:2px solid #fff; padding-bottom:30px; margin-bottom:30px; position:relative;}
+		.copyright {}
+		.footer-menu {list-style:none;}
+		.footer-menu li {list-style:none; display:inline-block;}
+		.footer-menu li:after {display:inline-block; content:"|"; color:#838383; padding:0px 3px 0px 7px;}
+		.footer-menu li:last-child:after,
+		.footer-menu li.last:after {display:none;}
+		.footer-menu li a {color:#838383;}
+
+		.btn-top {	cursor: pointer;display:block;	outline: none;-webkit-transition: all 0.3s;	-moz-transition: all 0.3s;	transition: all 0.3s; border: 2px solid #fff;width:70px; height:70px; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-top.png) center center no-repeat; overflow:hidden; text-indent:-9999px;	position:absolute; bottom:-2px; right:0px; }
+		.btn-top:hover { background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-top-dark.png) center center no-repeat #fff; }
+
+		.footer-bottom h5 {display:block; text-transform:uppercase;}
+		#footer .footer-bottom {margin-left:-70px; margin-right:-70px; }
+		#footer .footer-bottom > div {padding:0px 70px;}
+		#footer .footer-bottom p { font-family: 'Roboto', sans-serif; font-size:13px; font-size:1.3rem;}
+
+/* full screen */
+	.fullscreen-zoom { width: 100%; height: 100%; background: rgb(37,37,37); background: rgba(37,37,37,0.8); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9000; -webkit-background-size: contain; background-size: contain; background-position: center center; background-repeat: no-repeat; display: none;}
+	.fullscreen-zoom .zoom-close {display: block;z-index: 300;position: absolute;top: 20px;right: 20px;cursor: pointer;width: 36px;height: 36px;overflow: hidden;background: url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-out.png) center center no-repeat;cursor: pointer; }
+
+
+/* ==========================================================================
+    Location
+   ========================================================================== */
+    #map-cont-mobile {text-align:center; margin-bottom: 47px;}
+	#map-cont {position:relative; padding-bottom: 80px;}
+	#map-filters {max-width:344px; background:#fff; border:1px solid #8d7249; padding:45px 25px 25px 25px; position:absolute; top:5%; left:5%; z-index:300; box-shadow: 3px 4px 4.7px 0.3px rgba(141, 114, 73, 0.5); -webkit-box-shadow: 3px 4px 4.7px 0.3px rgba(141, 114, 73, 0.5); }
+	#map {width:100%; height:900px;}
+		.infobox{position:relative; text-align:center; width:300px; padding-bottom:6px;}
+		.infobox:after{content:''; width:16px; height:7px; background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/marker-arrow.png) center center no-repeat; position:absolute; bottom:0px; left:50%; margin-left:-8px;}
+		.infobox-inner{display:inline-block; padding:14px 17px 12px 17px; border:1px solid #8d7249; background:#fff!important; }
+		.infobox h3 {font-family: 'Roboto', sans-serif;font-size:15px; line-height:17px; font-size:1.5rem; line-height:1.7rem; color:#8d7249; text-transform:uppercase; letter-spacing:1.28px; text-align:center; font-weight:300;}
+
+		.entry .map-filter-list {list-style:none; border:1px solid #8d7249; border-bottom:0; margin:0; padding:0; margin-top:30px;}
+		.entry .map-filter-list li {list-style:none; display:block; margin:0; padding:0;}
+		.entry .map-filter-list li a {display:block; padding:12px 12px 12px 45px; border-bottom:1px solid #8d7249; font-family: 'Roboto', sans-serif;font-size:15px; line-height:15px; font-size:1.5rem; line-height:1.5rem; color:#8d7249;  letter-spacing:1.28px;  font-weight:300; background-size:25px 25px;}
+		.tag_retail {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/retail.svg) 10px center no-repeat;}
+		.tag_parks {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/parks.svg) 10px center no-repeat;}
+		.tag_restaurants {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/restaurants.svg) 10px center no-repeat;}
+		.tag_amenities {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/amenities.svg) 10px center no-repeat;}
+		.tag_school {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/school.svg) 10px center no-repeat;}
+		.no-svg .tag_retail {background-image:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/retail.png);}
+		.no-svg .tag_parks {background-image:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/parks.png);}
+		.no-svg .tag_restaurants {background-image:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/restaurants.png);}
+		.no-svg .tag_amenities {background-image:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/amenities.png);}
+		.no-svh .tag_school {background:url(http://www.collinshousemelbourne.com.au/main-site/images/markers/school.png);}
+		.entry .map-filter-list li.on a,
+		.entry .map-filter-list li a:hover {background-color:#d6cebc;}
+
+
+/* ==========================================================================
+    Register Popup
+   ========================================================================== */
+
+	.popup {width:100%; max-width:502px; background-color:#fbfaf3; padding:20px; margin:0 auto;}
+
+	#register-popup {}
+	#register-popup .close-popup {display:block; z-index:300; position:fixed; top:20px; right:20px; margin-left:-18px; cursor:pointer; width:36px; height:36px; overflow:hidden; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-out.png) center center no-repeat;}
+	.popup-inner {border:1px solid #8d7249; padding:60px 30px;}
+	.popup-inner h2 { font-family: 'Absara-Thin'; font-size:36px; line-height:36px; font-size:3.6rem; line-height:3.6rem; color:#8d7249; text-transform:uppercase; letter-spacing:0.6px; text-align:center;  margin-bottom:60px; }
+	.popup-inner h4  {display:block;font-family: 'Roboto', sans-serif; font-size:16px;font-size:1.6em; color:#8d7249; text-transform:uppercase; letter-spacing:1.28px; text-align:center; font-weight:300; margin-bottom:15px;}
+	.popup-inner hr {border:0; background:url(http://www.collinshousemelbourne.com.au/main-site/images/divider.svg) center center no-repeat; height:4px; margin:35px auto 50px auto;}
+	.no-svg .popup-inner hr { background-image: url(http://www.collinshousemelbourne.com.au/main-site/images/divider.png); }
+	.popup-inner  h3 {font-weight:normal;font-family: 'Roboto', sans-serif;  font-size:18px; line-height:27px; font-size:1.8rem; line-height:2.7rem; color:#8d7249; text-transform:uppercase; letter-spacing:1.44px; text-align:center; text-decoration:underline; display:block; margin-bottom:20px;}
+	.popup-inner  p {font-weight:300;font-family: 'Roboto', sans-serif;  font-size:18px; line-height:27px; font-size:1.8rem; line-height:2.7rem; color:#8d7249;  letter-spacing:1.44px; text-align:center; margin-bottom:30px;}
+
+	.form {}
+	.form input[type=text],
+	.form input[type=email]{display:block; background-color:#fff; border:1px solid #8d7249; height:50px; margin-bottom:10px; padding:0px 20px; font-family: 'Roboto', sans-serif;font-size:15px; font-size:1.5rem;  color:#8d7249; font-weight:300; width:100%;}
+	.form label.error { position: absolute; height: 0; width: 0; overflow: hidden; }
+	.form input[type=text].error, .form input[type=email].error { border-color: red; }
+	.form-bottom { margin-top:26px; margin-bottom:35px;}
+	.form input[type=submit]  {background-color:#8d7249; color:#fff; border:0; opacity:1; -webkit-transition: all 400ms ease; -moz-transition: all 400ms ease; -ms-transition: all 400ms ease; -o-transition: all 400ms ease; transition: all 400ms ease; font-family: 'Montserrat', sans-serif;  font-size:15px; line-height:15px; font-size:1.5rem; line-height:1.5rem; color:#fff; text-transform:uppercase; -webkit-transition: color 0.3s cubic-bezier(0.7,0,0.3,1); 	transition: color 0.3s cubic-bezier(0.7,0,0.3,1); padding:16px 65px 15px 65px; letter-spacing:1.35px; font-weight:400;}
+	.form input[type=submit] :hover  { opacity:0.8;; }
+	.mandatory-text {color:#8d7249; display:block; float:right;font-family: 'Roboto', sans-serif; font-size:11px; font-size:1.1rem; letter-spacing:0.66px; padding-top:15px;}
+
+	.privacy-link {display:block; text-align:center; font-family: 'Roboto', sans-serif;font-size:14px; font-size:1.4rem;  color:#8d7249; text-decoration:underline; text-transform:uppercase; letter-spacing:1.12px;}
+	.privacy-link:hover {color:#8d7249; opacity:0.8;}
+
+
+/* ==========================================================================
+    video Popup
+   ========================================================================== */
+	#video-popup { position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgb(11, 11, 11);background-color: rgba(11, 11, 11, 0.9); display: none;  z-index: 1043; }
+
+	#video-popup .logo-white { width: 400px; position: relative; margin: 0 auto; padding-top: 112px;}
+	#video-popup .logo-white img { display: block; width: 100%; }
+	#video-popup .video-con { width: 853px; height: 480px; position: relative; margin: 0 auto; background-color: #fff; }
+	#video-popup .video-con iframe { width: 100%; height: 100%; }
+	#video-popup .video-close { display:block; z-index:300; position:fixed; top:20px; right:20px; margin-left:-18px; cursor:pointer; width:36px; height:36px; overflow:hidden; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-out.png) center center no-repeat;}
+
+/* ==========================================================================
+    Custom Form Controls
+   ========================================================================== */
+	/**
+	 * Customize at your own risk
+	 */
+	.jstyling-select {margin: 0; padding: 0; position:relative; z-index: 0;}
+	.jstyling-select-t {white-space: nowrap; overflow: hidden;}
+	.jstyling-select-l {margin: 0; padding: 0; width: 100%; display: none; position: absolute; overflow-y: auto; z-index: 1000;}
+		.jstyling-select-l div {list-style: none; display: block; white-space: nowrap; overflow: hidden;}
+		.jstyling-select-l > div.item- { display: none !important; }
+		.jstyling-select-l div:hover {}
+		.jstyling-select-l div.disabled {}
+		.jstyling-select-l div.disabled:hover {}
+	.jstyling-select.active {z-index: 700; }
+		.jstyling-select.active .jstyling-select-l {display: block;}
+	.jstyling-checkbox, .jstyling-radio {margin: 0; padding: 0; display: inline-block; z-index: 1;}
+	.jstyling-checkbox input[type=checkbox], .jstyling-radio input[type=radio] {opacity: 0; filter: alpha(opacity = 0); z-index: 0;}
+
+	.jstyling-file {margin: 0; padding: 0;  display: inline-block; position: relative}
+	.jstyling-file-f {overflow: hidden; white-space:nowrap;}
+	.jstyling-file-b {position: relative; overflow: hidden}
+	.jstyling-file input[type=file] {margin: 0; padding: 0; opacity: 0; filter: alpha(opacity = 0); z-index: 1; position: absolute; top: 0; right: 0;}
+
+	/**
+	 * This you can customize
+	 */
+
+	/* Select wrapper */
+	.jstyling-select {display:block;  height:50px; margin-bottom:10px; font-family: 'Roboto', sans-serif;font-size:15px; font-size:1.5rem;  color:#8d7249; font-weight:300; width:100%;cursor: pointer; }
+	/* Select current option */
+	.jstyling-select-s { background-color:#fff; border:1px solid #8d7249; width:100%; padding:14px 20px; height: 50px;background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-dropdown.png) right center no-repeat #fff;  }
+	.jstyling-select-t {width: 202px;}
+
+	/* Select options list*/
+	.jstyling-select-l {max-height: 124px; background: #FFFFFF; border: 1px solid #8d7249;; border-top: 0; top: 49px; left: 0px;  width:100%;}
+		.jstyling-select-l div {height: auto; border-top: 1px solid #cccccc; padding: 5px 20px;}
+		.jstyling-select-l div:hover {background: #8d7249; color:#fff;}
+		.jstyling-select-l div.disabled {background: #E5E5E5;}
+		.jstyling-select-l div.disabled:hover {color: #000000;}
+		.jstyling-select-l div:first-child {border-top: 0}
+	.jstyling-select.active {background-position: 100% -28px;}
+	.jstyling-select.disabled {background-color: #E5E5E5;}
+
+	/* Checkbox */
+	.jstyling-checkbox {width: 16px; height: 16px;  background: url(http://www.collinshousemelbourne.com.au/main-site/images/jcusel-checkbox-radio.html) no-repeat;  vertical-align: middle;}
+	.jstyling-checkbox.active {background-position: 100% -16px;}
+	.jstyling-checkbox.disabled {background-position: 100% -32px;}
+	.jstyling-checkbox.active.disabled {background-position: 100% -48px;}
+
+	/* Radio button */
+	.jstyling-radio {width: 16px; height: 16px;  background: url(http://www.collinshousemelbourne.com.au/main-site/images/jcusel-checkbox-radio.html) no-repeat; background-position: 100% -64px;  vertical-align: middle;}
+	.jstyling-radio.active {background-position: 100% -80px;}
+	.jstyling-radio.disabled {background-position: 100% -96px;}
+	.jstyling-radio.active.disabled {background-position: 100% -112px;}
+
+	/* File input */
+	.jstyling-file-f {padding: 2px 2px; width: 200px; float: left; border: 1px solid #ccc;  height: 20px;}
+	.jstyling-file-b {margin-left: 4px; padding: 2px 2px; width: 80px; float: left; border: 1px solid #ccc; height: 20px; background: #eee; text-align: center;}
+
+	.slide img {width: 100%;}
+	.design-ext { padding-top: 90px; }
+	
+	#big1{
+	
+	right: 10px;
+	top: 10px;
+	
+	}
+	
+	#big2{
+	
+	right: 60px;
+	top: 10px;
+	
+	}
+
+	#cap1.cap{
+	left: 70px;
+	text-align: left;
+	position: absolute;
+	right:auto;
+	}
+	
+	#cap2.cap{
+	left: 20px;
+	text-align: left;
+	position: absolute;
+	right:auto;
+	}
+	
+
+/* ==========================================================================
+    Media Queries
+   ========================================================================== */
+	@media only screen and (max-width: 1023px){
+
+		.wrapper.large {  padding:0px 20px;}
+		#cap1.cap{
+	left: 40px;
+	}
+		
+	#cap2.cap{
+	left: 20px;
+	}
+		
+		
+	}
+
+	@media only screen and (max-width: 980px){
+		.nav > li a{ padding:23px 8px 23px 8px;}
+		#footer .footer-bottom {margin-left:-30px; margin-right:-30px; }
+		#footer .footer-bottom > div {padding:0px 30px;}
+		.section { padding: 100px 0px;}
+		.css-table .col.left {padding-right:25px;}
+		.css-table .col.right {padding-left:25px;}
+		#register { min-height: 300px; padding: 60px 0px 60px;}
+		#map-filters {padding: 35px 15px 15px;max-width: 250px;top: 2%;left: 2%;}
+		#map-actions h2 {font-size: 2rem;line-height: 2.4rem;padding-bottom: 25px;margin-bottom:25px;}
+		#map-actions .entry h4 {font-size: 1.5em;margin-bottom:0px;}
+		.entry .map-filter-list {margin-top:10px;}
+
+		#video-popup .video-con { width: 750px; height: 422px; }
+#big2{
+	
+	right: 35px;
+	top: 10px;
+	
+	}
+	
+	#cap1{
+	left: 100px;
+	}
+	
+	#cap2{
+	left: 20%;
+	}
+	
+	}
+
+	@media only screen and (max-width: 767px){
+
+		#cap1.cap{
+			left: 5%;
+		}
+		
+		#cap2.cap{
+			left: 5%;
+		}
+
+
+		html { font-size:100%;}
+
+		.mobile-hide {display:none;}
+		.mobile-show {display:block;}
+
+		#header-top { padding: 25px 0px 25px; }
+		#logo { width:342px; height:51px; }
+		body.fixed-header #header #logo{width:342px; height:51px; }
+		body.fixed-header #header #header-top{padding: 25px 0px 25px;}
+		.banner-wrapper.entry { padding: 0 20px; text-align: center;}
+
+		#banner-cont .wrapper {padding:0;}
+		#banner-cont.team { padding-top: 100px; }
+		.banner {padding: 19px 0px; margin-bottom: 100px; border: 0; padding: 0;}
+		.entry h2 { padding-bottom: 33px; margin-bottom: 46px; }
+		.entry h4 { margin-bottom: 20px; }
+		.slide {width:100%; height:auto; background-size:cover!important; background-position:center center!important; background-repeat:no-repeat!important;}
+		.slide-spacer.home { display: none; }
+		.home-slide { border: 0px; position: relative; }
+		.slide img {display: block; width: 100%;}
+		.banner.home .slide img { display: none; }
+		.banner.home .slide { height: 400px; }
+		.banner-slider-con { padding: 0; }
+
+		.banner.home, .cycle-slideshow.home-slideshow { height: 400px; overflow: hidden; }
+
+		.cycle-prev{left:0px;}
+		.cycle-next{right:0px;}
+		.cycle-control { margin-top:-23px; cursor:pointer; width:45px;}
+		.section { padding: 50px 0px 50px 0px;}
+		.entry .col p.last { margin-bottom: 35px; }
+		#banner-cont { padding-top: 0; }
+
+		.css-table {display: block; table-layout:auto;  }
+		.css-table .col { display: block; width: 100%; table-layout:auto; vertical-align:middle; text-align:center; float:none; padding:0!important;}
+		.css-table .col img {width:auto!important;}
+		.css-table .col.left {margin-bottom:45px;}
+
+		#footer .footer-bottom {margin-left:0px; margin-right:0px; }
+		#footer .footer-bottom > div {padding:0px; float:none; width:100%; margin-bottom:20px;}
+
+		.popup-inner h2 {font-size: 2.6rem; line-height: 2.6rem;}
+
+		.maps-link { cursor: pointer;padding: 20px 28px;display: inline-block;text-transform: uppercase;letter-spacing: 1px;outline: none;position: relative;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;border: 1px solid #8d7249;font-family: 'Montserrat', sans-serif;font-size: 15px;line-height: 15px;font-size: 1.5rem;line-height: 1.5rem;color: #8d7249;text-transform: uppercase; position: relative; margin: 0 auto; margin-top: 50px;}
+		.maps-link:hover {color:#8d7249;}
+
+		.form-bottom {text-align:center;}
+		.form input[type="submit"] {margin:0 auto;}
+
+		#register-popup .close-popup {display:block; z-index:300; position:relative; top:auto; bottom: -92px; left:50%; margin-left:0; cursor:pointer; width:36px; height:36px; overflow:hidden; background:url(http://www.collinshousemelbourne.com.au/main-site/images/icon-zoom-out.png) center center no-repeat; margin: 10px 0 0 -18px; }
+		.zoom-toggle { display: none; }
+		.mfp-close-btn-in .mfp-close { display: none; }
+
+		#video-popup .video-con { width: 480px; height: 270px; }
+		#video-popup .video-close { position: relative; right: auto; margin: 40px auto; }
+		#video-popup .logo-white { padding-top: 0; }
+
+		.col.right.col-img .cap { right: 141px }
+
+		.popup-inner h2 { margin-bottom: 50px; }
+		.popup-inner { padding-top: 50px; }
+
+		#cap1.cap{
+			left: 15%;
+		}
+		
+		#cap2.cap{
+			left: 15%;
+		}
+
+	}
+
+	@media only screen and (max-width: 479px){
+
+		html { font-size:62.5%;}
+
+		#menu {margin-top: 51px;}
+
+		#header-top { padding: 13px 0px 13px; }
+		#logo { width:171px; height:25px; }
+		body.fixed-header #header #logo{width:171px; height:25px;  }
+		body.fixed-header #header #header-top{padding: 13px 0px 13px;}
+
+		#banner-cont {padding-bottom:50px;}
+		.banner {margin-bottom:50px;}
+
+		.section { }
+		.css-table .col.left {margin-bottom: 50px;}
+		.entry .col p.last { margin-bottom: 29px;}
+
+		#footer {padding:20px 0px;}
+
+		.mandatory-text {float:none; display:block; text-align:center;}
+		.form input[type="submit"] {display:block; width:100%;}
+
+
+		#video-popup .logo-white img { width: 320px; }
+		#video-popup .video-con { width: 320px; height: 180px; }
+#cap1.cap{
+			left: 5%;
+		}
+		
+		#cap2.cap{
+			left: 5%;
+		}
+
+	}
+
+
+	/* iPads (portrait) ----------- */
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {	
+		.css-table .col.right .zoom-toggle { top: 34px; right: 90px; }
+		.design-ext .css-table .col.right .zoom-toggle { top: 160px; }
+		.design-ext .col.right.col-img .cap { bottom: 170px; }
+		.design-ext { padding-top: 0; }
+		
+	}
+
+	/* iPads (landscape) ----------- */
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+		#video-popup .logo-white { padding-top: 0px; }
+		.css-table .col.right .zoom-toggle { top: 48px; right: 100px; }
+		.col.right.col-img .cap { bottom: 60px; }
+		
+			
+	}
